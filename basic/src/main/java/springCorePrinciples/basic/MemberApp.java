@@ -8,7 +8,7 @@ import springCorePrinciples.basic.member.MemberServiceImpl;
 public class MemberApp {
     //순수 자바 코드
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        MemberService memberService = AppConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
         Member findMember = memberService.findMember(member.getId());
